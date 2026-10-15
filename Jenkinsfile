@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         APP_NAME = 'mevi-html-site'
-        IMAGE_NAME = 'mevi-html-site:1.0'
+        IMAGE_NAME = 'mevi-jenkins-docker:1.0'
         NETWORK_NAME = 'mevi-network'
         JENKINS_CONTAINER = 'jenkins'
         HOST_PORT = '8082'
