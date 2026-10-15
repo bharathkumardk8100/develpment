@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Hub</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6ff;
+            color: #202448;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 8%;
+            background: white;
+            box-shadow: 0 2px 12px #0000000d;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #6554d9;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            margin-left: 24px;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #6554d9;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 85px 20px;
+            background: linear-gradient(135deg, #6554d9, #9285ff);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 28px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 8px;
+            background: white;
+            color: #6554d9;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #ece9ff;
+            transform: translateY(-2px);
+        }
+
+        .features {
+            padding: 55px 8%;
+            text-align: center;
+        }
+
+        .features h2 {
+            font-size: 30px;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #777;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px #2222220b;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px #22222215;
+        }
+
+        .emoji {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #777;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .card button {
+            background: #6554d9;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background: #4838b5;
+        }
+
+        #message {
+            margin-top: 25px;
+            color: #6554d9;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 24px;
+            background: #202448;
+            color: white;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 18px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🎓 StudentHub</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Features</a>
+            <a href="#about">About</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Your Learning Journey Starts Here</h1>
+
+        <p>
+            Learn new skills, organize your studies, and build
+            a brighter future — one step at a time.
+        </p>
+
+        <a href="#features" class="btn">Explore Features →</a>
+    </section>
+
+    <section class="features" id="features">
+        <h2>Explore Your Student Hub</h2>
+
+        <p class="subtitle">
+            Everything you need to make student life easier.
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="emoji">📚</div>
+                <h3>Study Materials</h3>
+                <p>
+                    Organize your notes and access your
+                    learning resources in one place.
+                </p>
+                <button onclick="showMessage('Study Materials')">
+                    Explore
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="emoji">💻</div>
+                <h3>Coding Practice</h3>
+                <p>
+                    Improve your programming skills and
+                    prepare for technical interviews.
+                </p>
+                <button onclick="showMessage('Coding Practice')">
+                    Start Learning
+                </button>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🚀</div>
+                <h3>Career Growth</h3>
+                <p>
+                    Prepare for placements, improve your
+                    resume, and explore career opportunities.
+                </p>
+                <button onclick="showMessage('Career Growth')">
+                    Get Started
+                </button>
+            </div>
+
+        </div>
+
+        <p id="message"></p>
+    </section>
+
+    <section class="features" id="about">
+        <h2>About StudentHub</h2>
+        <p class="subtitle">
+            A simple space to learn, grow, and achieve your goals.
+        </p>
+    </section>
+
+    <footer>
+        <p>© 2026 StudentHub | Learn • Grow • Succeed</p>
+    </footer>
+
+    <script>
+        function showMessage(feature) {
+            document.getElementById("message").textContent =
+                "Welcome to " + feature + "! Keep learning and growing. 🎉";
+        }
+    </script>
+
+</body>
+</html>
